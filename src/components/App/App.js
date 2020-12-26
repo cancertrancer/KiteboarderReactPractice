@@ -9,12 +9,19 @@ class App extends React.Component {
     this.state = {
       searchResults: Windy.search()
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState({
+      searchResults: Windy.search()
+    });
   }
 
   render() {
     return (
       <div className="App">
-        <Results searchResults={this.state.searchResults} />
+        <Results searchResults={this.state.searchResults} onClick={this.handleClick} />
       </div>
     );
   }

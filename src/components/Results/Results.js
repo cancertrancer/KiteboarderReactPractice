@@ -7,6 +7,7 @@ class Results extends React.Component {
       return (
         <div className="resultsContainer">
           <ResultsWindow searchResults={this.props.searchResults} />
+          <button onClick={this.props.onClick}>Refresh</button>
         </div>
       );
     }
